@@ -1,4 +1,4 @@
-# ship-rescue
+# Task - Ship Rescue
 
 Oh no, captain! Our engine broke and we're stranded at sea! And with the ongoing solar storm that disabled most of our systems, calling for help won't be easy. However, you have a good old-fashioned radio system on board that should still work and you’re not the only one - most other captains carry one as well!
 
