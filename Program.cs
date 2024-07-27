@@ -8,7 +8,8 @@ namespace Models
     {
         static void Main()
         {
-            var inputData = "AAA_Y: 0,-5,90\nBCA_C: 10,20,95\nSAC_F: 5,80,65\nARH_B: 100,45,60\nXXX_S: 150,70,180";
+            var inputFilePath = "input.txt";
+            var inputData = File.ReadAllText(inputFilePath);
             var vessels = ParseInput(inputData);
             var startVessel = vessels.First();
             var x = CanCommunicate(new Vessel("AAA", 0, -5, 90, 'Y'), new Vessel("BCA", 10, 20, 95, 'C'));
