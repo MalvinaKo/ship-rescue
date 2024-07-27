@@ -16,7 +16,7 @@ namespace Models
             var (pathToShore, distanceToShore) = BfsShortestPath(graph, vessels, startVessel.Id, 'S');
             var (pathBack, distanceBack) = BfsShortestPath(graph, vessels, pathToShore.Last(), startVessel.Type);
             var totalDistance = distanceToShore + distanceBack;
-            Console.WriteLine($"Total distance: {totalDistance}");
+            Console.WriteLine($"Total distance: {Math.Round(totalDistance, 2)}");
             Console.WriteLine("Path to shore: " + string.Join(" -> ", pathToShore));
             Console.WriteLine("Path back: " + string.Join(" -> ", pathBack));
         }
@@ -56,7 +56,6 @@ namespace Models
                 { 'B', new[] { 'C', 'F', 'B', 'S' } },
                 { 'S', new[] { 'B', 'Y' } }
             };
-            //var distance = Math.Sqrt(Math.Pow(v2.X - v1.X, 2) + Math.Pow(v2.Y - v1.Y, 2));
             var distance = CalculateDistance(v1, v2);
             return compatibleTypes[v1.Type].Contains(v2.Type) && distance <= v1.Range;
         }

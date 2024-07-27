@@ -16,10 +16,5 @@ namespace Models
             Range = range;
             Type = type;
         }
-        
-        public override string ToString()
-        {
-            return $"Id: {Id}, X: {X}, Y: {Y}, Range: {Range}, Type: {Type}";
-        }
     }
 }
